@@ -8,13 +8,13 @@ import About from "../src/pages/About";
 import Contact from "../src/pages/Contact";
 import Login from "../src/pages/Login";
 import Register from "../src/pages/Register";
-import Dashboard from "../src/pages/Dashboard";
+import Dashboard from "../src/pages/DashBoard";
 import Detail from "../src/pages/Detail";
 import { useStore } from "./context/ContextProvider";
 import Creators from "./pages/Creators";
 import {Toaster} from 'react-hot-toast'
 import UpdateBlog from "./dashboard/UpdateBlog";
-import NotFound from "./pages/Notfound";
+import NotFound from "./pages/NotFound";
 function App() {
   const location=useLocation();
   const {blogs,isAuthenticated}=useStore()
