@@ -20,7 +20,7 @@ function Detail() {
     const fetchblogs = async() => {
       try {
         const { data } = await axios.get(
-          `http://localhost:8000/api/blogs/single-blog/${id}`,
+          `https://blog-application-0g90.onrender.com/api/blogs/single-blog/${id}`,
           {
             withCredentials:true,
             headers: {
@@ -42,7 +42,7 @@ function Detail() {
   const fetchComments = async () => {
     try {
       const { data } = await axios.get(
-        `http://localhost:8000/api/blogs/comments/${id}`,
+        `https://blog-application-0g90.onrender.com/api/blogs/comments/${id}`,
         { withCredentials: true }
       );
       if (data.success) {
@@ -62,7 +62,7 @@ function Detail() {
   const onSubmit = async (formData) => {
     try {
       const { data } = await axios.post(
-        `http://localhost:8000/api/blogs/comment/${id}`,
+        `https://blog-application-0g90.onrender.com/api/blogs/comment/${id}`,
         { content: formData.content },
         { withCredentials: true }
       );
@@ -82,7 +82,7 @@ function Detail() {
   const updateComment = async (commentId) => {
     try {
       const { data } = await axios.put(
-        `http://localhost:8000/api/blogs/comments/${commentId}`,
+        `https://blog-application-0g90.onrender.com/api/blogs/comments/${commentId}`,
         { content: editingContent },
         { withCredentials: true }
       );
@@ -106,7 +106,7 @@ function Detail() {
   const deleteComment = async (commentId) => {
     try {
       const { data } = await axios.delete(
-        `http://localhost:8000/api/blogs/comments/${commentId}`,
+        `https://blog-application-0g90.onrender.com/api/blogs/comments/${commentId}`,
         { withCredentials: true }
       );
       if (data.success) {
