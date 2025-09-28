@@ -16,7 +16,7 @@ export const ContextProvider = ({ children }) => {
                 //const token=Cookies.get('jwt');
                 //const parsedToken=token?JSON.parse(token): undefined
                
-                 const {data} = await axios.get("http://localhost:8000/api/users/my-profile",
+                 const {data} = await axios.get("https://blog-application-0g90.onrender.com/api/users/my-profile",
                     {withCredentials:true,
                     headers:{"Content-Type":"application/json"}}
                 )
@@ -34,7 +34,7 @@ export const ContextProvider = ({ children }) => {
 
             try {
 
-                const res = await axios.get("http://localhost:8000/api/blogs/all-blogs")
+                const res = await axios.get("https://blog-application-0g90.onrender.com/api/blogs/all-blogs")
                 //console.log(res)
                 setBlogs(res.data)
             } catch (error) {
