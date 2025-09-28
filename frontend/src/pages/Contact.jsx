@@ -29,7 +29,7 @@ function Contact() {
   return (
     <div>
       <div className="bg-gradient-to-b from-[#0f0c29] via-[#302b63] to-[#24243e] min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 ">
-        <div className="max-w-4xl w-full space-y-8 bg-black p-10 rounded-lg shadow-lg ">
+        <div className="max-w-4xl w-full space-y-8 bg-white p-10 rounded-lg shadow-lg ">
           <div className="text-center">
             <h2 className="text-3xl font-extrabold text-gray-900">
               Contact Us
@@ -46,7 +46,7 @@ function Contact() {
                     type="text"
                     name="username"
                     placeholder="Your Name"
-                    className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+                    className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 text-black"
                     {...register("username", { required: true })}
                   />
                   {errors.username && (
@@ -60,7 +60,7 @@ function Contact() {
                     type="email"
                     name="email"
                     placeholder="Your Email"
-                    className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+                    className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 text-black"
                     {...register("email", { required: true })}
                   />
                   {errors.email && (
@@ -73,7 +73,7 @@ function Contact() {
                   <textarea
                     name="message"
                     placeholder="Your Message"
-                    className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+                    className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 text-black"
                     {...register("message", { required: true })}
                   />
                   {errors.message && (
@@ -85,7 +85,7 @@ function Contact() {
                 <div>
                   <button
                     type="submit"
-                    className="w-full bg-black text-black px-4 py-2 rounded-lg hover:bg-yellow-600 duration-300 "
+                    className="w-full bg-red-500 text-black px-4 py-2 rounded-lg hover:bg-yellow-600 duration-300 "
                   >
                     Send Message
                   </button>
