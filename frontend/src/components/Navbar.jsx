@@ -21,7 +21,7 @@ function Navbar() {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:8000/api/users/logout",
+        "https://blog-application-0g90.onrender.com/api/users/logout",
         {},
         { withCredentials: true }
       );
