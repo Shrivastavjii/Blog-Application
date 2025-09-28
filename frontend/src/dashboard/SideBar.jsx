@@ -34,7 +34,7 @@ const SideBar = ({ setComponent }) => {
       navigateto('/login')
     } catch (error) {
       console.log(error)
-      toast.error(error?.respnse?.message || "Failed to logout");
+      toast.error(error?.response?.message || "Failed to logout");
     }
   }
   return (

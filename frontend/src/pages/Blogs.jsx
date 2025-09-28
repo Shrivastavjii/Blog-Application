@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 
 function Blogs() {
   const { blogs } = useStore();
+  console.log("Blog list:", blogs);
+  console.log("One blog ID:", blogs[0]?._id);
 
   console.log(blogs);
   return (

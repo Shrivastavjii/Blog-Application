@@ -26,6 +26,8 @@ export const ContextProvider = ({ children }) => {
                
             } catch (error) {
                 console.log(error)
+                setIsAuthenticated(false); 
+                setProfile(null); 
             }
         }
         const fetchBlogs = async () => {

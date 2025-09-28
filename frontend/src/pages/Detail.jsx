@@ -11,17 +11,18 @@ function Detail() {
   const [comments, setComments] = useState([]);
   const [editingId, setEditingId] = useState(null);
   const [editingContent, setEditingContent] = useState("");
-  const {profile,setProfile}=useStore()
+  const {profile,setProfile,isAuthenticated}=useStore()
+  console.log("Fetching blog with ID:", id);
   console.log(profile)
+ 
   console.log(blogs);
   useEffect(() => {
-    const fetchblogs = async () => {
+    const fetchblogs = async() => {
       try {
         const { data } = await axios.get(
           `http://localhost:8000/api/blogs/single-blog/${id}`,
-
           {
-            withCredentials: true,
+            withCredentials:true,
             headers: {
               "Content-Type": "application/json",
             },
@@ -29,6 +30,7 @@ function Detail() {
         );
         console.log(data);
         setblogs(data);
+         console.log(isAuthenticated)
       } catch (error) {
         console.log(error);
       }

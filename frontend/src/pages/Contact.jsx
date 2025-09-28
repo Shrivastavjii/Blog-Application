@@ -29,7 +29,7 @@ function Contact() {
   return (
     <div>
       <div className="bg-gradient-to-b from-[#0f0c29] via-[#302b63] to-[#24243e] min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 ">
-        <div className="max-w-4xl w-full space-y-8 bg-white p-10 rounded-lg shadow-lg ">
+        <div className="max-w-4xl w-full space-y-8 bg-black p-10 rounded-lg shadow-lg ">
           <div className="text-center">
             <h2 className="text-3xl font-extrabold text-gray-900">
               Contact Us
@@ -85,7 +85,7 @@ function Contact() {
                 <div>
                   <button
                     type="submit"
-                    className="w-full bg-black text-white px-4 py-2 rounded-lg hover:bg-yellow-600 duration-300 "
+                    className="w-full bg-black text-black px-4 py-2 rounded-lg hover:bg-yellow-600 duration-300 "
                   >
                     Send Message
                   </button>
